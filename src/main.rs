@@ -1,5 +1,6 @@
 fn main() {
-    println!("{}", parser_truefalse("".as_bytes()));
+    let in_ram = std::fs::read_to_string("fixtures/empty.trueorfalse").unwrap();
+    println!("{}", parser_truefalse(in_ram.as_bytes()));
 }
 
 
