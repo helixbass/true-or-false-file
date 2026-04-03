@@ -1,5 +1,5 @@
 fn main() {
-    println!("Hello, world!");
+    println!("{}", parser_truefalse("".as_bytes()));
 }
 
 
@@ -11,4 +11,16 @@ fn parser_truefalse(file_content: &[u8]) -> bool {
     }
 
 
+}
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_3_long() {
+        let pars_candy = parser_truefalse("abc".as_bytes());
+        assert_eq!(pars_candy, true);
+    }
 }
